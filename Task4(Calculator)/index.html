@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      body{
+        background-image: url(https://img.freepik.com/premium-photo/top-view-blue-calculator-notepad-color-background_260672-4055.jpg?w=900);
+        background-size: cover;
+        overflow: hidden;
+      }
+      h1 {
+        text-align: center;
+        font-size: 60px;
+        color: teal;
+      }
+      #calculator{
+        height: 400px;
+        width: 25%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        margin: auto;
+        border-radius: 10px;
+        margin-top: 40px;
+        padding: 20px;
+      }
+      #input{
+        height: 50px;
+        width: 90%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        margin: auto;
+        margin-top: 20px;
+        font-size: 30px;
+        color: rgb(45, 71, 3);
+        padding-top: 25px;
+        
+      }
+      #keyboard{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(4,60px);
+        gap: 10px;
+        margin-top: 20px;
+
+      }
+      #keyboard > div{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-weight: bold;
+      }
+      .black{
+        background-color: black;
+        color: white;
+      }
+      .red{
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <div id="calculator">
+      <div id="input"></div>
+      <div id="keyboard">
+        <div onclick="addToInput('1')">1</div>
+        <div onclick="addToInput('2')">2</div>
+        <div onclick="addToInput('3')">3</div>
+        <div class="black" onclick="addToInput('+')">+</div>
+        <div onclick="addToInput('4')">4</div>
+        <div onclick="addToInput('5')">5</div>
+        <div onclick="addToInput('6')">6</div>
+        <div class="black" onclick="addToInput('-')">-</div>
+        <div onclick="addToInput('7')">7</div>
+        <div onclick="addToInput('8')">8</div>
+        <div onclick="addToInput('9')">9</div>
+        <div class="black" onclick="addToInput('*')">*</div>
+        <div class="red" onclick="clearInput()">C</div>
+        <div onclick="addToInput('0')">0</div>
+        <div class="black" onclick="calculateResult()">=</div>
+        <div class="black" onclick="addToInput('/')">/</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // JavaScript functions to make the calculator dynamic
+    let inputField = document.getElementById('input');
+
+    function addToInput(value) {
+      inputField.textContent += value;
+    }
+
+    function clearInput() {
+      inputField.textContent = '';
+    }
+
+    function calculateResult() {
+      try {
+        inputField.textContent = eval(inputField.textContent);
+      } catch (error) {
+        inputField.textContent = 'Error';
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.quotes {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.quote {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #007bff;
+}
+
+blockquote {
+    font-size: 18px;
+    margin: 0;
+}
+
+cite {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.testimonials {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.testimonial {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.testimonial-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.author-name {
+    font-weight: bold;
+}
+
+.author-title {
+    font-style: italic;
+    color: #555;
+}
